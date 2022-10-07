@@ -14,15 +14,15 @@ confirm.addEventListener("click",
             case (distance < 1):
                 alert("La distanza deve essere maggiore di 0 Km!!");
                 break;
-            case (isNaN(distance)):
+            /*case (isNaN(distance)):
                 alert("La distanza deve essere un numero!!");
-                break;
+                break;*/
             case ((age < 0) || (age > 120)):
                 alert("L'età deve essere compresa tra 0 e 120!!");
                 break;
-            case (isNaN(age)):
+            /*case (isNaN(age)):
                 alert("L'età deve essere un numero!!");
-                break;
+                break;*/
             default:
                 const fullPrice = distance * 0.21;
                 // console.log(fullPrice);
