@@ -8,7 +8,7 @@ confirm.addEventListener("click",
         passenger = document.getElementById("inputName").value;
         distance = Number(document.getElementById("inputDistance").value);
         age = Number(document.getElementById("inputAge").value);
-        // alert(`${passenger} ${distance} ${age}`);
+        // console.log(`${passenger} ${distance} ${age}`);
 
         switch (true) {
             case (distance < 1):
@@ -38,7 +38,23 @@ confirm.addEventListener("click",
                 const ticketPrice = fullPrice - discount;
                 // console.log(ticketPrice);
 
-                // alert(`Il biglietto costa ${ticketPrice.toFixed(2)}€`);
+                // console.log(`Il biglietto costa ${ticketPrice.toFixed(2)}€`);
+
+                document.querySelector("h4").innerHTML = passenger;
+                document.getElementById("price").innerHTML = `${ticketPrice.toFixed(2)}€`;
+                if (age < 18) {
+                    document.getElementById("age_type").innerHTML = "Minorenne";
+                    document.getElementById("offer").innerHTML = "Sconto Minorenne";
+                    document.getElementById("discount_price").innerHTML = "-20%";
+                } else if (age > 65) {
+                    document.getElementById("age_type").innerHTML = "Anziano";
+                    document.getElementById("offer").innerHTML = "Sconto Anziano";
+                    document.getElementById("discount_price").innerHTML = "-40%";
+                } else {
+                    document.getElementById("age_type").innerHTML = "Adulto";
+                    document.getElementById("offer").innerHTML = "Ordinaria";
+                    document.getElementById("discount_price").innerHTML = "";
+                }
                 break;
         }
     })
