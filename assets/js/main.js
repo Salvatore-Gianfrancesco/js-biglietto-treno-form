@@ -55,6 +55,8 @@ confirm.addEventListener("click",
                     document.getElementById("offer").innerHTML = "Ordinaria";
                     document.getElementById("discount_price").innerHTML = "";
                 }
+                document.getElementById("ticket_code").innerHTML = (Math.random() * 1000000000).toFixed(0);
+
                 break;
         }
     })
