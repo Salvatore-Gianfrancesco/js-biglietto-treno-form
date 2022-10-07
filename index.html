@@ -6,14 +6,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Train Ticket</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./assets/css/style.css">
     <script src="./assets/js/main.js" defer></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 </head>
 
-<body>
+<body class="bg-light py-5">
 
+    <div class="container">
+        <h1 class="pt-5 pb-3" id="prova">Calcola il prezzo del tuo biglietto</h1>
+
+        <form class="row g-3 ">
+            <div class="col-auto">
+                <label for="inputName" class="visually-hidden">Name</label>
+                <input type="text" class="form-control" id="inputName" placeholder="Nome e Cognome">
+            </div>
+
+            <div class="col-auto">
+                <label for="inputDistance" class="visually-hidden">Distance</label>
+                <input type="number" class="form-control" id="inputDistance" placeholder="Distanza in Km">
+            </div>
+
+            <div class="col-auto">
+                <label for="inputAge" class="visually-hidden">Age</label>
+                <input type="number" class="form-control" id="inputAge" placeholder="Età">
+            </div>
+
+            <div class="col-auto">
+                <button type="submit" class="btn btn-primary mb-3">Conferma</button>
+            </div>
+        </form>
+    </div>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
